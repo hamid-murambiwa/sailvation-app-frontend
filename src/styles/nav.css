@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 20%;
+  width: auto;
   height: 100vh;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -17,45 +17,35 @@
 }
 
 .links-con {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 60%;
 }
 
 .nav-cruise {
   padding-left: 50px;
+  padding-right: 50px;
   cursor: pointer;
 }
 
-.links-con li,
-a {
+.links-con a {
   text-decoration: none !important;
   list-style: none !important;
   color: rgb(13, 13, 24) !important;
   font-size: 20px;
   font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.links-con li {
-  width: 80%;
-  padding: 10px;
-}
-
-.links-con li:hover,
-a:hover {
+.links-con a:hover {
   background-color: #97bf02 !important;
   color: white !important;
 }
 
 .nav-cruise:hover > a {
   color: #fff;
-}
-
-.links-con ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
-  padding: 0;
 }
 
 @media screen and (max-width: 768px) {

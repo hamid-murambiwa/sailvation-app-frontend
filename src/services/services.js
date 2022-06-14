@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BACK_END_URL = 'http://pacific-lake-89990.herokuapp.com/api/v1';
+const BACK_END_URL = 'https://sailvation.herokuapp.com/api/v1';
 // const BACK_END_URL = 'https://boiling-harbor-88832.herokuapp.com/api/v1';
 // const BACK_END_URL = 'https://pacific-lake-89990.herokuapp.com/api/v1';
 

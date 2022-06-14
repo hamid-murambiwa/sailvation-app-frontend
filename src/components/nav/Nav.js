@@ -15,28 +15,13 @@ function Nav() {
       <div clasName="logo-con">
         <img src={img} alt="Sailvation logo" className="logo" />
       </div>
-      <nav className="links-con">
-        <ul>
-          <li className="nav-cruise">
-            <Link to="/">Cruises</Link>
-          </li>
-          <li className="nav-cruise">
-            <Link to="/reservations">Reservations</Link>
-          </li>
-          <li className="nav-cruise">
-            <Link to="/cruises/reservation" onClick={updateStorage}>Make a reservation</Link>
-          </li>
-          {/* <li>
-            <Link to="/cruises/:id/reservation/:id/destination">Destinations</Link>
-          </li> */}
-          <li className="nav-cruise">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="nav-cruise">
-            <Link to="/signup">Sign Up</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="links-con">
+        <Link to="/" className="nav-cruise">Cruises</Link>
+        <Link to="/reservations" className="nav-cruise">Reservations</Link>
+        <Link to="/cruises/reservation" onClick={updateStorage} className="nav-cruise">Make a reservation</Link>
+        <Link to="/login" className="nav-cruise">Login</Link>
+        <Link to="/signup" className="nav-cruise">Sign Up</Link>
+      </div>
       <section>
         <div className="icons">
           <FaTwitter style={{ color: 'black', fontSize: '1rem', margin: '6px' }} />

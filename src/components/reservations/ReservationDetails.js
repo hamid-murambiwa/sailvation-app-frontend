@@ -20,6 +20,7 @@ const ReservationDetails = () => {
     dispatch(fetchAllReservations(userid));
     dispatch(fetchAllDestinations());
     setNum(num + 1);
+    document.getElementById(`${id}`).removeChild();
   };
 
   useEffect(() => {
@@ -40,7 +41,14 @@ const ReservationDetails = () => {
 
   return (
     <>
-      <h1 className="text-center m-4">Reservations</h1>
+      <h1 className="text-center">Reservations</h1>
+      {
+      reservationsall.length === 0 ? (
+        <p className="n-res"><i>You have no reservations</i></p>
+      ) : (
+        null
+      )
+      }
       {
         isLoggedIn === 'true' ? (
           <div className="reservations-container">
@@ -48,7 +56,7 @@ const ReservationDetails = () => {
          reservationsall && reservationsall.map((reservation) => (
            reservation.user_id === parseInt(userid, 10)
             && (
-              <div key={reservation.id} className="reservation">
+              <div id={reservation.id} key={reservation.id} className="reservation">
                 <Card>
                   <Card.Header as="h5">
                     Reservation #
@@ -61,7 +69,7 @@ const ReservationDetails = () => {
                       key={reservation.id}
                       destinations={destinations}
                     />
-                    <div className="d-flex justify-content-end">
+                    <div className="justify-content-end">
 
                       <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id, userid)} className="btn btn-danger">Cancel the reservation</button>
 
@@ -77,7 +85,6 @@ const ReservationDetails = () => {
           <h1 className="text-center"> You have to Log in</h1>
         )
       }
-
     </>
   );
 };

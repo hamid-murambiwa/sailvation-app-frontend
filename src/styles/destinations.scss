@@ -6,24 +6,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: black;
   margin-right: 10px !important;
   height: 100%;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
-  border: 1px solid black;
   border-radius: 5px;
 }
 
 .con {
-  width: 79%;
+  width: 100%;
   position: fixed;
   right: 0;
-  margin-top: 80px;
+  padding-top: 40px;
+  padding-right: 10px;
+  padding-left: 270px;
+  height: 100vh !important;
+  background-color: #96bf0219;
 }
 
 .swiper-button-next,
@@ -37,7 +37,7 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .swiper-button-next {
@@ -45,7 +45,7 @@
   justify-content: flex-start;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  right: 0;
+  right: 0 !important;
 }
 
 .swiper-button-prev {
@@ -53,7 +53,7 @@
   justify-content: flex-end;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  left: 0;
+  left: 0 !important;
 }
 
 .days {
@@ -67,13 +67,14 @@
   border-radius: 50%;
   background-color: grey;
   padding: 5px;
-  min-width: 50px;
+  min-width: 68px;
   height: 50px;
   margin-right: 10px;
 }
 
 .days p {
   margin: 0;
+  padding: 5px;
 }
 
 .d-text {
@@ -85,14 +86,19 @@
 .r-btn {
   text-decoration: none;
   color: white !important;
-  background-color: rgb(196, 144, 13);
+  background-color: #be6715;
   padding: 10px;
   border-radius: 5px;
   margin: 0;
 }
 
+.r-btn:hover {
+  background-color: #97bf02;
+}
+
 .info-con {
   display: flex;
+  min-height: 120px;
 }
 
 .b-sect {
@@ -100,9 +106,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: white;
+  background-color: #c7d36fd5;
   border-radius: 5px;
   height: 70px;
+  margin-bottom: 20px;
+  border: 0.3px solid grey;
+  box-shadow: 2px 2px 2px darkgrey;
 }
 
 .avg {
@@ -133,9 +142,10 @@
 
 .price-con p {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 28px;
-  font-weight: bold;
-  margin-left: 5px;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  color: black;
 }
 
 .swiper-horizontal>,
@@ -154,6 +164,7 @@
 
 .title-con h1 {
   color: black;
+  font-weight: bolder;
 }
 
 .pub p {
@@ -184,10 +195,16 @@
   flex-direction: column;
   align-items: center;
   margin-left: 10rem;
+  background-color: #96bf0219;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
+  margin: 0 !important;
+  padding-top: 40px !important;
+  margin-left: 170px !important;
+  font-weight: bolder !important;
+  background-color: #96bf0219;
 }
 
 .reservation-container {
@@ -352,6 +369,8 @@
 .card {
   margin-bottom: 2rem;
   color: black;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .card-desc {

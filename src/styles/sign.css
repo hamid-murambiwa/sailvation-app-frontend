@@ -1,5 +1,77 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  right: 0;
+  margin: 0 !important;
+  height: 100vh !important;
+  padding: 0;
+  padding-left: 150px;
+}
+
+#email {
+  margin-left: 10px;
+}
+
+#name {
+  margin-left: 10px;
+}
+
+.mBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100%;
+  background: url("./grid.svg") left 40px bottom 580px no-repeat, url("./triangle.svg") right 220px top 330px no-repeat, url("./square.svg") right -100px bottom 55px no-repeat;
+  background-size: 200px 200px;
+  background-color: rgba(150, 191, 2, 0.93) !important;
+  margin: 0 !important;
+  color: #fff;
+}
+
+.doc-flex {
+  display: flex;
+  align-items: center;
+  height: 100vh !important;
+  width: 100% !important;
+}
+
+.m-4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-u {
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px 60px 15px 60px;
+  margin-top: 20px;
+}
+
+.sign-u:hover {
+  color: #fff;
+  background-color: #198754;
+}
+
+.mt-3 {
+  border-radius: 20px;
+  padding: 10px 40px 10px 40px;
 }

@@ -1,24 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300&family=Permanent+Marker&family=Roboto+Slab:wght@300;400;500;600;900&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lobster', cursive;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-.d-flex {
+.justify-content-end {
   display: flex;
-}
-
-.d-flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.d-flex-center {
   align-items: center;
-  justify-content: center;
+  height: auto !important;
+}
+
+#cruise-img {
+  width: 240px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.n-res {
+  margin: 0 !important;
+  padding-top: 40px !important;
+  margin-left: 170px !important;
+  text-align: center;
+  color: red;
+  background-color: #96bf0219;
 }
 
 .t-center {

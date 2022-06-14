@@ -38,14 +38,10 @@ export default function LoginPage() {
   };
   return (
         <div className='container mt-5'>
-          <div className="form-container d-flex">
-            <div className='m-4'>
-              <h2>Don't you have a account</h2>
-              <Link to="/signup" className='mt-3'>You can Sign Up Here</Link>
-            </div> 
+          <div className="form-container doc-flex"> 
             <form  className='m-4'>
               <div className="form-inner">
-                <h2>Login</h2>
+                <h2>Login To Your Account</h2>
                 <div className="form-group mt-4">
                   <label htmlFor="email">
                     Email:
@@ -62,6 +58,10 @@ export default function LoginPage() {
               </button>
               </div>
             </form>
+            <div className='m-4 mBox'>
+              <h2>Don't have a account?</h2>
+              <Link to="/signup" className='sign-u'>You can Sign Up Here</Link>
+            </div>
           </div>
         </div>
   )

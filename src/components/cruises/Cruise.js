@@ -75,10 +75,13 @@ function Cruise() {
         }}
       >
         { cruises && cruises.map((cruise) => (
-          <SwiperSlide key={cruise.id} className="reservation-list-item" style={{ backgroundImage: `url(${cruise.image})`, height: '400px' }}>
+          <SwiperSlide key={cruise.id} className="reservation-list-item">
             <section className="info-con">
               <div className="days"><p>{cruise.name}</p></div>
               <p className="d-text">{cruise.description}</p>
+            </section>
+            <section className="img-con">
+              <img src={cruise.image} alt="cruise" id="cruise-img" />
             </section>
             <section className="b-sect">
               <div className="price-con"><p className="avg">{cruise.name}</p></div>
