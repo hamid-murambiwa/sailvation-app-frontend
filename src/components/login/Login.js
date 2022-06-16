@@ -15,7 +15,7 @@ export default function LoginPage() {
     if(users.langth !== 0) dispatch(fetchAllUsers());
   }, [dispatch]);
   const routeChange = () => {
-    const path = `/cruises`;  
+    const path = `/cruises/reservation`;  
     history.push(path);
   };
   const popUpWrongEmail = () => {
@@ -41,7 +41,7 @@ export default function LoginPage() {
           <div className="form-container doc-flex"> 
             <form  className='m-4'>
               <div className="form-inner">
-                <h2>Login To Your Account</h2>
+                <h2 id='log-title'>Login</h2>
                 <div className="form-group mt-4">
                   <label htmlFor="email">
                     Email:

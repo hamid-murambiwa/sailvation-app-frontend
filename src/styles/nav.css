@@ -13,7 +13,15 @@
 }
 
 .logo {
-  height: 200px;
+  height: 100px;
+}
+
+.logo-con {
+  display: flex;
+  justify-content: flex-start;
+  width: 100% !important;
+  padding-left: 50px;
+  padding-top: 50px;
 }
 
 .links-con {
@@ -37,6 +45,7 @@
   font-weight: bolder;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: 0.5px solid #96bf02;
 }
 
 .links-con a:hover {

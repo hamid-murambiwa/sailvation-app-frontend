@@ -29,7 +29,7 @@ function SignupForm() {
           }}
         >
           <div className="form-inner">
-            <h2>Signup</h2>
+            <h2 id="log-title">Signup</h2>
             {/* ERROR! */}
             <div className="form-group">
               <label htmlFor="name">

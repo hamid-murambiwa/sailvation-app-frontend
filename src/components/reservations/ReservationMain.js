@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import { fetchAllDestinations } from '../../redux/Destinations/destinations';
 import { getAllCruises } from '../../redux/Cruises/cruises';
@@ -79,7 +79,7 @@ const ReservationMain = () => {
             </div>
             <div className="reservations-description">
               <div className="reservations-header">
-                <h1>Book the Cruise</h1>
+                <h1>Book a cruise</h1>
               </div>
               <p>
                 Pick a Cruise to Reserve!
@@ -117,7 +117,12 @@ const ReservationMain = () => {
                     {title}
                   </option>
                   { destinations && destinations.map((destination) => (
-                    <option key={destination.id} value={destination.id}>{destination.city}</option>
+                    <option
+                      key={destination.id}
+                      value={destination.id}
+                    >
+                      {destination.city}
+                    </option>
                   ))}
 
                 </select>
@@ -130,7 +135,27 @@ const ReservationMain = () => {
 
           </div>
         ) : (
-          <h1 className="text-center"> You have to Log in</h1>
+          <>
+            <div
+              className="reservations-container"
+              style={{
+                backgroundImage: `linear-gradient(
+            325deg,
+            rgba(87, 111, 1, 0.777) 0%,
+            rgba(150, 191, 2, 0.93) 100%
+            ),url(${(image)})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+              }}
+            >
+              <div className="sign-in-message">
+                <h1 className="sign-in-h">Log in to reserve a cruise</h1>
+                <Link to="/login" className="sign-btn" element={<Redirect to="/cruises/reservation" />}>
+                  login page
+                </Link>
+              </div>
+            </div>
+          </>
         )
      }
 

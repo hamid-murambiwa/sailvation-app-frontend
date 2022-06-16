@@ -26,6 +26,28 @@
   background-color: #96bf0219;
 }
 
+.sign-in-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sign-btn {
+  text-decoration: none;
+  background-color: white;
+  width: max-content;
+  color: #96bf02;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.sign-btn:hover {
+  background-color: #02a3bf;
+  color: white;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
@@ -66,10 +88,10 @@
   color: white;
   border-radius: 50%;
   background-color: grey;
-  padding: 5px;
-  min-width: 68px;
+  padding: 15px;
+  min-width: 60px;
   height: 50px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .days p {
@@ -79,8 +101,10 @@
 
 .d-text {
   color: rgb(60, 43, 2);
-  font-weight: bold;
+  font-weight: normal;
   font-size: larger;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .r-btn {
@@ -128,8 +152,8 @@
 .swiper-pagination {
   position: static !important;
   color: rgb(100, 100, 100) !important;
-  font-weight: bolder !important;
-  margin-bottom: 20px;
+  font-weight: 700 !important;
+  margin-bottom: 10px;
 }
 
 .price-con {
@@ -159,12 +183,24 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .title-con h1 {
-  color: black;
+  background-image: url("wallpaperflare.com_wallpaper (1).jpg");
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-size: 70px;
   font-weight: bolder;
+  border-bottom: 2px solid #96bf02;
+  border-radius: 5px;
+  padding-bottom: 15px;
 }
 
 .pub p {
@@ -189,7 +225,7 @@
 
 /* Reservations */
 .reservations-container {
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -203,8 +239,11 @@
   margin: 0 !important;
   padding-top: 40px !important;
   margin-left: 170px !important;
-  font-weight: bolder !important;
   background-color: #96bf0219;
+}
+
+.mt-5 {
+  margin: 0 !important;
 }
 
 .reservation-container {
@@ -243,10 +282,32 @@
 }
 
 .reservations-description h1 {
-  font-size: 3rem;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  font-weight: 600;
+  background-image: url("wallpaperflare.com_wallpaper (1).jpg");
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+#log-title {
+  background-image: url("wallpaperflare.com_wallpaper (1).jpg");
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-size: 70px;
+  font-weight: bolder;
+  background-color: #96bf0219;
 }
 
 .reservations-description p {
@@ -374,7 +435,12 @@
 }
 
 .card-desc {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 100%;
   padding: 1rem;
+  padding-top: 0;
 }
 
 .card-title {

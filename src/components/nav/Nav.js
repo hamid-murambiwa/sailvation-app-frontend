@@ -4,7 +4,7 @@ import '../../styles/nav.css';
 import {
   FaTwitter, FaFacebook, FaVimeo, FaInstagram, FaPinterest,
 } from 'react-icons/fa';
-import img from '../../styles/Sail.png';
+import img from '../../styles/logo.png';
 
 function Nav() {
   const updateStorage = () => {
@@ -12,7 +12,7 @@ function Nav() {
   };
   return (
     <div className="nav-con">
-      <div clasName="logo-con">
+      <div className="logo-con">
         <img src={img} alt="Sailvation logo" className="logo" />
       </div>
       <div className="links-con">

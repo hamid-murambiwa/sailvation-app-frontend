@@ -20,7 +20,6 @@ const ReservationDetails = () => {
     dispatch(fetchAllReservations(userid));
     dispatch(fetchAllDestinations());
     setNum(num + 1);
-    document.getElementById(`${id}`).removeChild();
   };
 
   useEffect(() => {
@@ -41,7 +40,9 @@ const ReservationDetails = () => {
 
   return (
     <>
-      <h1 className="text-center">Reservations</h1>
+      <div className="text-center">
+        <h1 id="log-title">Reservations</h1>
+      </div>
       {
       reservationsall.length === 0 ? (
         <p className="n-res"><i>You have no reservations</i></p>
@@ -53,14 +54,14 @@ const ReservationDetails = () => {
         isLoggedIn === 'true' ? (
           <div className="reservations-container">
             {
-         reservationsall && reservationsall.map((reservation) => (
+         reservationsall && reservationsall.map((reservation, index) => (
            reservation.user_id === parseInt(userid, 10)
             && (
               <div id={reservation.id} key={reservation.id} className="reservation">
                 <Card>
                   <Card.Header as="h5">
                     Reservation #
-                    {reservation.id}
+                    {index + 1}
                   </Card.Header>
                   <Card.Body>
                     <SingleReservation
