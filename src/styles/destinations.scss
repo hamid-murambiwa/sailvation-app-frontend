@@ -353,6 +353,9 @@
 .book-btn,
 #dropdown-menu-align-end,
 .react-datepicker-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 60px;
   border-radius: 30px;
@@ -363,6 +366,7 @@
   letter-spacing: 1px;
   font-size: 1.1rem;
   box-shadow: none;
+  text-decoration: none;
 }
 
 .reservations-buttons .react-datepicker-wrapper {

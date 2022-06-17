@@ -125,7 +125,13 @@ const ReservationMain = () => {
 
                 </select>
 
-                <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
+                <Link
+                  to="/reservations"
+                  onClick={createReservation}
+                  className="book-btn"
+                >
+                  Book now
+                </Link>
               </div>
               { reservationPost[0] && reservationPost[0].status === 201
               && <p>Reservation was successful!</p>}
