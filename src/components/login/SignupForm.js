@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Fade from 'react-reveal/Fade';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { postNewUser } from '../../redux/Users/users';
@@ -29,7 +30,9 @@ function SignupForm() {
           }}
         >
           <div className="form-inner">
-            <h2 id="log-title">Signup</h2>
+            <Fade top>
+              <h2 id="log-title">Signup</h2>
+            </Fade>
             {/* ERROR! */}
             <div className="form-group">
               <label htmlFor="name">
@@ -44,8 +47,9 @@ function SignupForm() {
                 <input type="email" name="email" id="email" onChange={(e) => setDetails({ ...details, email: e.target.value })} value={details.email} />
               </label>
             </div>
-
-            <input type="submit" className="btn btn-success mt-3" value="Signup" disabled={isLoggedIn} />
+            <Fade bottom>
+              <input type="submit" className="btn btn-success mt-3" value="Signup" disabled={isLoggedIn} />
+            </Fade>
           </div>
         </form>
         {isLoggedIn

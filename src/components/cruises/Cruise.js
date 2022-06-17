@@ -54,9 +54,9 @@ function Cruise() {
               spaceBetween: 20,
             },
             700: {
-              width: 500,
+              width: 400,
               slidesPerView: 1,
-              spaceBetween: 25,
+              spaceBetween: 6,
             },
             // when window width is >= 900px
             900: {

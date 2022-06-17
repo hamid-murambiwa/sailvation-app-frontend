@@ -1,5 +1,6 @@
 /* eslint-disable*/
 import React, { useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -41,7 +42,9 @@ export default function LoginPage() {
           <div className="form-container doc-flex"> 
             <form  className='m-4'>
               <div className="form-inner">
-                <h2 id='log-title'>Login</h2>
+                <Fade top>
+                  <h2 id='log-title'>Login</h2>
+                </Fade>
                 <div className="form-group mt-4">
                   <label htmlFor="email">
                     Email:
@@ -49,18 +52,20 @@ export default function LoginPage() {
                   </label>
                 </div>
                 <div id="wrong-email"></div>
-              <button className='mt-3 btn btn-success' type="submit" onClick={(e) => {
-                e.preventDefault();
-                submitHandler();
-              }}
-              >
-                Login
-              </button>
+                <Fade bottom>
+                  <button className='mt-3 btn btn-success' type="submit" onClick={(e) => {
+                    e.preventDefault();
+                    submitHandler();
+                  }}
+                  >
+                    Login
+                  </button>
+                </Fade>
               </div>
             </form>
             <div className='m-4 mBox'>
               <h2>Don't have a account?</h2>
-              <Link to="/signup" className='sign-u'>You can Sign Up Here</Link>
+              <Link to="/signup" className='sign-u'>You can sign up here</Link>
             </div>
           </div>
         </div>

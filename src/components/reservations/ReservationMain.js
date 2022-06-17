@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
+import Zoom from 'react-reveal/Zoom';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
 import { fetchAllDestinations } from '../../redux/Destinations/destinations';
 import { getAllCruises } from '../../redux/Cruises/cruises';
 import { postNewReservations } from '../../redux/Reservations/reservations';
+import img from '../../styles/key.png';
 import '../../styles/destinations.scss';
 
 const ReservationMain = () => {
@@ -74,9 +75,6 @@ const ReservationMain = () => {
               backgroundSize: 'cover',
             }}
           >
-            <div className="reservation-header-links">
-              <Link to={`/${userid}`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
-            </div>
             <div className="reservations-description">
               <div className="reservations-header">
                 <h1>Book a cruise</h1>
@@ -137,7 +135,7 @@ const ReservationMain = () => {
         ) : (
           <>
             <div
-              className="reservations-container"
+              className="reservations-container0"
               style={{
                 backgroundImage: `linear-gradient(
             325deg,
@@ -149,6 +147,9 @@ const ReservationMain = () => {
               }}
             >
               <div className="sign-in-message">
+                <Zoom>
+                  <img src={img} alt="key" className="login-icon" />
+                </Zoom>
                 <h1 className="sign-in-h">Log in to reserve a cruise</h1>
                 <Link to="/login" className="sign-btn" element={<Redirect to="/cruises/reservation" />}>
                   login page

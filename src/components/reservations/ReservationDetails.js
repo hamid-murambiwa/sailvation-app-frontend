@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import Rotate from 'react-reveal/Rotate';
 import SingleReservation from './SingleReservation';
 import { deleteReservation, fetchAllReservations } from '../../redux/Reservations/reservations';
 import { getAllCruises } from '../../redux/Cruises/cruises';
 import { fetchAllDestinations } from '../../redux/Destinations/destinations';
+import img from '../../styles/reserve.png';
 import '../../styles/destinations.scss';
 
 const ReservationDetails = () => {
@@ -39,13 +42,21 @@ const ReservationDetails = () => {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
 
   return (
-    <>
+    <div id="container">
       <div className="text-center">
         <h1 id="log-title">Reservations</h1>
       </div>
       {
       reservationsall.length === 0 ? (
-        <p className="n-res"><i>You have no reservations</i></p>
+        <div className="reservations-container sec">
+          <p className="n-res">You have no reservations</p>
+          <h2>Reserve a cruise</h2>
+          <Rotate>
+            <Link to="/cruises/reservation">
+              <img src={img} alt="reserve icon" className="login-icon" />
+            </Link>
+          </Rotate>
+        </div>
       ) : (
         null
       )
@@ -83,10 +94,10 @@ const ReservationDetails = () => {
         }
           </div>
         ) : (
-          <h1 className="text-center"> You have to Log in</h1>
+          <div className="reservations-container sec" />
         )
       }
-    </>
+    </div>
   );
 };
 
