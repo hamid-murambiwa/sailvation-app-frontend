@@ -9,6 +9,7 @@
   height: 100vh !important;
   padding: 0;
   padding-left: 150px;
+  z-index: -1;
 }
 
 #email {

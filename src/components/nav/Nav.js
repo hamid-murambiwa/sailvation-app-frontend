@@ -5,11 +5,8 @@ import '../../styles/nav.css';
 import {
   FaTwitter, FaFacebook, FaVimeo, FaInstagram, FaPinterest,
 } from 'react-icons/fa';
-import {
-  CAccordion, CAccordionItem, CAccordionHeader, CAccordionBody,
-} from '@coreui/react';
-import '@coreui/coreui/dist/css/coreui.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
+import '@szhsin/react-menu/dist/core.css';
 import img from '../../styles/logo.png';
 import hamburger from '../../styles/menu.png';
 
@@ -53,24 +50,22 @@ function Nav() {
         </div>
       </Fade>
       <div className="mobile-nav">
-        <Fade left>
-          <CAccordion>
-            <CAccordionItem>
-              <CAccordionHeader className="ham-btn">
+        <Menu
+          className="menu-icon"
+          menuButton={(
+            <MenuButton className="menu-icon">
+              <Fade left>
                 <img src={hamburger} className="hamburger-icon" alt="hamburger icon" />
-              </CAccordionHeader>
-              <CAccordionBody>
-                <div className="mobile-links-con">
-                  <Link to="/" className="mobile-nav-cruise">Cruises</Link>
-                  <Link to="/reservations" className="mobile-nav-cruise">Reservations</Link>
-                  <Link to="/cruises/reservation" onClick={updateStorage} className="mobile-nav-cruise">Make a reservation</Link>
-                  <Link to="/login" className="mobile-nav-cruise">Login</Link>
-                  <Link to="/signup" className="mobile-nav-cruise l">Sign Up</Link>
-                </div>
-              </CAccordionBody>
-            </CAccordionItem>
-          </CAccordion>
-        </Fade>
+              </Fade>
+            </MenuButton>
+            )}
+        >
+          <MenuItem><Link to="/" className="mobile-nav-cruise">Cruises</Link></MenuItem>
+          <MenuItem><Link to="/reservations" className="mobile-nav-cruise">Reservations</Link></MenuItem>
+          <MenuItem><Link to="/cruises/reservation" onClick={updateStorage} className="mobile-nav-cruise">Make a reservation</Link></MenuItem>
+          <MenuItem><Link to="/login" className="mobile-nav-cruise">Login</Link></MenuItem>
+          <MenuItem><Link to="/signup" className="mobile-nav-cruise l">Sign Up</Link></MenuItem>
+        </Menu>
         <div className="logo-con">
           <img src={img} alt="Sailvation logo" className="logo" />
         </div>
