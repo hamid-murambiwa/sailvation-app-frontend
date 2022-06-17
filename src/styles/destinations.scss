@@ -5,7 +5,7 @@
 .reservation-list-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: black;
   margin-right: 10px !important;
   height: 100%;
@@ -25,6 +25,10 @@
   min-height: 100vh !important;
   background-color: #96bf0219;
   z-index: -1;
+}
+
+.swiper-backface-hidden .swiper-slide {
+  min-height: 70vh;
 }
 
 .sign-in-message {
@@ -92,7 +96,7 @@
   padding: 15px;
   min-width: 60px;
   height: 50px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .days p {
@@ -103,8 +107,8 @@
 .d-text {
   color: rgb(60, 43, 2);
   font-weight: normal;
-  font-size: larger;
-  text-align: center;
+  font-size: small;
+  text-align: left;
   padding-top: 10px;
 }
 
@@ -128,15 +132,21 @@
 
 .b-sect {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #c7d36fd5;
-  border-radius: 5px;
-  height: 70px;
+  height: auto;
+  justify-content: center;
   margin-bottom: 20px;
-  border: 0.3px solid grey;
-  box-shadow: 2px 2px 2px darkgrey;
+  padding-top: 30px;
+  text-align: center;
+  border-top: 4px solid black;
+  border-style: dotted;
+  border-right: none;
+  margin-bottom: 10px;
+  border-left: none;
+  border-bottom: none;
+  gap: 15px;
+  width: 100%;
 }
 
 .avg {
@@ -155,7 +165,7 @@
   color: rgb(100, 100, 100) !important;
   font-weight: 700 !important;
   margin-bottom: 10px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .price-con {
@@ -171,7 +181,7 @@
   font-size: 25px;
   font-weight: 500;
   margin: 0;
-  color: black;
+  color: #7F8487;
 }
 
 .swiper-horizontal>,
@@ -465,7 +475,7 @@
   }
 
   .swiper-pagination {
-    margin-top: 10px !important;
+    margin-top: 0 !important;
   }
 
   .reservations-description {
@@ -512,6 +522,7 @@
     flex-direction: column;
     align-items: center;
     width: min-content !important;
+    min-height: 70vh !important;
   }
 
   .text-center {
@@ -523,6 +534,7 @@
     margin-left: 0 !important;
     padding: 10%;
     padding-top: 0;
+    height: auto !important;
   }
 
   .card {
@@ -530,7 +542,7 @@
   }
   
   .price-con p {
-    margin-right: 30px !important;
+    margin-right: 0 !important;
   }
 
   #log-title {
@@ -586,11 +598,21 @@
   .con {
     padding-top: 10px;
   }
+
+  .swiper-backface-hidden .swiper-slide {
+    margin-left: 20px;
+    margin-right: 20px !important;
+  }
+
   #cruise-img {
     width: 200px;
     height: 159px;
   }
   .info-con {
     min-height: 80px !important;
-}
+  }
+
+  .b-sect {
+    padding-top: 10px !important;
+  }
 }

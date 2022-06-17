@@ -70,7 +70,7 @@
     display: flex;
     justify-content: space-between !important;
     background-color: #446a46;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 20px 15px 20px;
   }
 
   .menu-icon {
@@ -81,6 +81,7 @@
 
   .hamburger-icon {
     width: 50px;
+    margin-bottom: -5px !important;
   }
 
   .accordion-item:last-of-type {
@@ -119,10 +120,6 @@
     white-space: nowrap;
   }
 
-  .l {
-    border-bottom: 0 !important;
-  }
-
   .logo-con {
     display: flex;
     justify-content: center !important;
@@ -138,7 +135,7 @@
   }
 
   .szh-menu {
-    background-color: rgb(150, 191, 2) !important;
+    background-color: #cc704b !important;
     padding: 0 !important;
     width: auto !important;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
@@ -148,5 +145,9 @@
   .szh-menu__item {
     padding: 10px !important;
     border-bottom: 2px solid rgb(121, 171, 91);
+  }
+
+  .l {
+    border-bottom: 0 !important;
   }
 }
