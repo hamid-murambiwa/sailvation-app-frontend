@@ -13,7 +13,7 @@
 
 Homepage
 -------------
-<img width="1440" alt="Screenshot 2022-04-14 at 18 45 33" src="https://user-images.githubusercontent.com/71644515/163435499-baa23a4b-8ecc-4ac6-aecd-b613195642f8.png">
+<img width="500px" height="500px" alt="Screenshot 2022-04-14 at 18 45 33" src="https://user-images.githubusercontent.com/71644515/174386958-c637b8be-a659-45a6-a9ff-f075159c9989.png">
 
 ## Learning objectives
 
