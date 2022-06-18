@@ -42,14 +42,14 @@ function Cruise() {
           grabCursor
           breakpoints={{
           // when window width is >= 100px
-            100: {
-              width: 250,
+            400: {
+              width: 200,
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 0,
             },
             // when window width is >= 600px
             600: {
-              width: 300,
+              width: 350,
               slidesPerView: 1,
               spaceBetween: 20,
             },
