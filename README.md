@@ -2,7 +2,7 @@
 
 # Sailvation-app-frontend
 ## Description
-> A simple app to reserve cruise ships to various locations
+> A web application made with Ruby on Rails + React that allows users to book their favourite cruises and destinations.
 
 ## Built With
 
