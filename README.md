@@ -17,7 +17,7 @@ Homepage
 
 ## Live Demo
 
-[Live Demo Link](https://62ada1e5cf10dc0008911fa4--tangerine-basbousa-b21c1a.netlify.app/)
+[Live Demo Link](https://sailvation.netlify.app/)
 
 ## Learning objectives
 
